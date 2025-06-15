@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Documentation</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      width: 100vw;
+      background: #f4f4f4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .button-container {
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle,rgba(174, 218, 245, 1) 0%, rgba(240, 240, 250, 1) 50%, rgba(193, 201, 201, 1) 100%);
+    }
+
+    button {
+      padding: 1rem 2rem;
+      background: #fff;
+      color: #000;
+      border: 3px solid #000;
+      width: 100%;
+      box-shadow: 5px 5px 0 #000;
+      cursor: pointer;
+      font-size: 4rem;
+      transition: all 0.1s ease;
+    }
+
+    button:active {
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px 0 #000;
+    }
+
+    a {
+      width: 80%;
+    }
+    @media (min-width: 95rem) {
+      a {
+        width: 16%;
+      }
+      button {
+	padding: 0.5rem 1rem;
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="button-container">
+	  <a href="EN/manual.pdf">       <button>Manual      </button></a>
+
+	  <a href="EN/electrical.pdf">   <button>Electrical  </button></a>
+
+	  <a href="EN/spares.pdf">       <button>Spares      </button></a>
+
+	  <a href="EN/pneumatics-1.pdf"> <button>Pneumatics-1</button></a>
+
+  </div>
+</body>
+</html>
+
