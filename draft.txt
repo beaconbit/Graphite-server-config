@@ -1,0 +1,23 @@
+## ngrok
+ngrok.yml
+systemd service for ngrok
+
+## prevent suspend and sleep 
+sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
+sudo systemctl restart systemd-logind
+
+## nftables modification
+forward ssh traffic
+forward traffic between containers running on private network interface and containers running on public network interface
+
+
+## nginx
+nginx modification to forward traffic to documents
+sudo systemctl enable nginx
+
+## docker
+configure docker to run on the correct interfaces 
+systemd service to start docker compose for all graphite containers
+
+
+

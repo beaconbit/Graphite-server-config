@@ -1,0 +1,21 @@
+version: "3"
+agent:
+    authtoken: auth-token-goes-here
+
+endpoints:
+  - name: document-server
+    url: https://machine-info.au.ngrok.io
+    upstream:
+      url: 8888
+  - name: graphite-ui
+    url: https://graphite.ngrok.dev
+    upstream:
+      url: 3001
+  - name: ssh
+    url: tcp://1.tcp.au.ngrok.io:20673
+    upstream:
+      url: 22
+  - name: svelte-dev
+    url: https://wasp-test.au.ngrok.io
+    upstream:
+      url: 5173

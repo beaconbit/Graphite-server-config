@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2015-01-02" />
+  <meta name="description" content="a cheat sheet for Bash" />
+  <meta property="og:title" content="Bash shortcuts" />
+  <meta property="og:site_name" content="Issa Rice" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://issarice.com/bird300.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="300" />
+  <meta property="og:image:height" content="300" />
+  <meta property="article:author" content="https://www.facebook.com/riceissa" />
+  <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+  <link rel="me" href="https://github.com/riceissa" />
+  <link rel="me" href="https://twitter.com/riceissa" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="theme.default.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="alternate" type="application/atom+xml" href="https://issarice.com/atom.xml" />
+  <script src="jquery-latest.min.js"></script>
+  <script src="jquery.tablesorter.js"></script>
+  <title>Bash shortcuts - Issa Rice</title>
+  <style type="text/css">
+    code{white-space: pre;}
+    .mjx-chtml {font-size: 120% ! important}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <script src="anchor.min.js"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2G3J40KHN4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-2G3J40KHN4');
+  </script>
+  <script data-goatcounter="https://issarice.goatcounter.com/count"
+            async src="//gc.zgo.at/count.js"></script>
+  <script src="change-theme.js"></script>
+</head>
+<body>
+<script>
+  // set_theme_from_cookies();
+</script>
+<nav id="site_navigation">
+    <div style="float:left;">
+    <a href="./index">Home</a>
+    | <a href="./about">About</a>
+    | <a href="./all-pages">Newest changes</a>
+    | <span id="changeThemeMenu" style="display: none;">Set color scheme to:
+         <span id="auto-menu-option" style="cursor: pointer;" class="unselectable" onclick="change_theme.set_color('auto')">auto</span>,
+         <span id="light-menu-option" style="cursor: pointer;" class="unselectable" onclick="change_theme.set_color('light')">light</span>,
+         <span id="dark-menu-option" style="cursor: pointer;" class="unselectable" onclick="change_theme.set_color('dark')">dark</span>
+      </span>
+    <!--
+    <span id="changeThemeMenu" style="display: none;">| Change
+    {<a href="#" onclick="change_theme_text_width()">text width</a>,
+     <a href="#" onclick="change_theme_color()">color</a>,
+     <a href="#" onclick="change_theme_font_family()">font</a>,
+     <a href="#" onclick="change_theme_table()" title="Changes the styling of tables (booktabs or wikitable); change is only visible on pages that have at least one table">table</a>}</span>
+    -->
+  </div>
+  <div style="float:right;">
+        <form name="google-search" action="https://google.com/search" method="get">
+      <fieldset style="border:0;">
+        <input type="hidden" name="sitesearch" value="https://issarice.com" />
+        <input name="q" type="text" />
+        <input type="hidden" name="q" value="-site:wiki.issarice.com" />
+        <input type="hidden" name="q" value="-site:lw2.issarice.com" />
+        <input type="hidden" name="q" value="-site:eaforum.issarice.com" />
+        <input type="hidden" name="q" value="-site:timelines.issarice.com" />
+        <input type="hidden" name="q" value="-site:aiwatch.issarice.com" />
+        <input type="hidden" name="q" value="-site:orgwatch.issarice.com" />
+        <input type="hidden" name="q" value="-site:beliefs.issarice.com" />
+        <input type="hidden" name="q" value="-site:contentcreation.issarice.com" />
+        <input type="submit" name="btnG" value="Search site" />
+      </fieldset>
+    </form>
+  </div>
+  <div id="theme-picker-menu">
+    Current mode (<a id="reader-mode-help" href="https://issarice.com/adaptive-typography" title="Click for more explanation. Click the word “movement” or “absorption” to toggle the mode. You can also press t on your keyboawrd to toggle the mode. Highlight text on the page before selecting the mode to save your reading spot.">?</a>): <span id="change-reader-mode-toggle" onclick="change_theme.change_reader_mode()" class="unselectable">movement</span>
+  </div>
+</nav>
+
+<main>
+<header id="title-block-header">
+<h1 class="title">Bash shortcuts</h1>
+
+<div style="font-size: 80%;">
+<a href="https://raw.githubusercontent.com/riceissa/issarice.com/master/wiki/Bash%20shortcuts.md">View source</a>
+  | <a href="https://github.com/riceissa/issarice.com/commits/master/wiki/Bash%20shortcuts.md">View history</a>
+  | <a href="https://github.com/riceissa/issarice.com/commits/master/wiki/Bash%20shortcuts.md.atom">Atom feed for this file</a>
+</div>
+
+<dl class="page-metadata">
+  <dt>Creation date</dt>
+  <dd>2011-08-23</dd>
+  <dt>Last substantive revision date</dt>
+  <dd>2015-01-02</dd>
+  <dt title="From version control (Git); includes trivial changes">Last modification date</dt>
+  <dd>2024-01-10</dd>
+  <dt>Generated on</dt>
+  <dd>2025-03-16</dd>
+</dl>
+
+</header>
+<nav id="TOC" role="doc-toc">
+<h2 id="TOCheading">Contents</h2>
+<ul>
+<li><a href="#conventions" id="toc-conventions">Conventions</a></li>
+<li><a href="#movement" id="toc-movement">Movement</a></li>
+<li><a href="#editing" id="toc-editing">Editing</a></li>
+<li><a href="#processes" id="toc-processes">Processes</a></li>
+<li><a href="#history" id="toc-history">History</a></li>
+<li><a href="#completions" id="toc-completions">Completions</a></li>
+<li><a href="#scrolling" id="toc-scrolling">Scrolling</a></li>
+</ul>
+</nav>
+<hr />
+<p>Here are some useful shortcuts when you’re working in Bash. Shortcuts
+are categorised by use.</p>
+<p>These shortcuts will be familiar to those using <a href="Emacs"
+class="wikilink">Emacs</a>. Many of the keybindings will also work in
+many line-based environments, e.g. REPLs for many languages, Python
+Jupyter console, MySQL prompt. Even Vim has <a
+href="https://github.com/tpope/vim-rsi">vim-rsi</a> to enable some of
+these.</p>
+<h2 id="conventions">Conventions</h2>
+<ul>
+<li><code>Ctrl</code>-<code>a</code>: Hold the Control key and press
+‘a’.</li>
+<li><code>Alt</code>-<code>a</code>: Hold the Alt key and press ‘a’. The
+Alt key is sometimes called the <a
+href="http://en.wikipedia.org/wiki/Meta_key">Meta key</a>. If the Alt
+key doesn’t work, try using the Escape key instead. (So
+<code>Esc</code>-<code>a</code> instead. You might need to let go of the
+Escape key before pressing ‘a’.)</li>
+<li><code>key1</code> <code>key2</code>: Press <code>key1</code>, let
+go, then press <code>key2</code>.</li>
+<li>This page is <a
+href="http://en.wikipedia.org/wiki/Case_sensitivity"><em>case
+sensitive</em></a> so <code>a</code> is different from <code>A</code>.
+<code>A</code> is the same as <code>Shift</code>-<code>a</code>.</li>
+<li>A <em>smallword</em> is any string of characters that contain
+<em>only</em> characters from the set <code>{a-z,A-Z,0-9}</code>.
+Smallwords are delimited by non-alphanumeric characters (whitespace,
+full stop, caret, etc.). This is similar to a lowercase ‘w’ in the Vi
+editor.</li>
+<li>A <em>bigword</em> is any string of characters <em>not containing a
+whitespace</em>. Bigwords are delimited by whitespace characters (space,
+tab, etc.). This is similar to an uppercase ‘W’ in the Vi editor.</li>
+</ul>
+<h2 id="movement">Movement</h2>
+<ul>
+<li><code>Ctrl</code>-<code>a</code> or <code>Home</code>: Jump to the
+beginning of the line.</li>
+<li><code>Ctrl</code>-<code>e</code> or <code>End</code>: Jump to the
+end of the line.</li>
+<li><code>Ctrl</code>-<code>xx</code>: Jump between saved locations.
+Pressing this will toggle between the current location and the beginning
+of the line. If you move the cursor after you have jumped to the
+beginning, then press this again, Bash will remember the location. Press
+this again to come back to the location you just saved.</li>
+<li><code>Ctrl</code>-<code>f</code> or <code>Right Arrow Key</code>: Go
+forward one character.</li>
+<li><code>Alt</code>-<code>f</code>: Go forward one smallword. This does
+not work on the Gnome Terminal because <code>Alt</code>-<code>f</code>
+is bound to the “file” menu. However, <code>Esc</code> <code>f</code>
+works.</li>
+<li><code>Ctrl</code>-<code>b</code> or <code>Left Arrow Key</code>: Go
+back one character.</li>
+<li><code>Alt</code>-<code>b</code>: Go back one smallword.</li>
+<li><code>Ctrl</code>-<code>]</code> <code>a</code>: Move to the next
+occurrence of ‘a’.</li>
+<li><code>Alt</code>-<code>Ctrl</code>-<code>]</code> <code>a</code>:
+Move to the previous occurrence of ‘a’.</li>
+</ul>
+<h2 id="editing">Editing</h2>
+<ul>
+<li><code>Ctrl</code>-<code>x</code> <code>Ctrl</code>-<code>u</code> or
+<code>Ctrl</code>-<code>/</code> or <code>Ctrl</code>-<code>_</code>:
+Undo the last operation.</li>
+<li><code>Alt</code>-<code>r</code>: Revert all changes to the current
+line. For example, if you edited a command from your history, this would
+revert to the original.</li>
+<li><code>Ctrl</code>-<code>h</code> or <code>Backspace</code>: Delete
+the character to the left of the cursor.</li>
+<li><code>Alt</code>-<code>Backspace</code>: Cut to the beginning of the
+current smallword. (From left side of the cursor to the beginning of the
+smallword. Does not cut leading whitespace.)</li>
+<li><code>Ctrl</code>-<code>d</code>: Delete the character under the
+cursor. If the line is empty, exit the terminal. This command fails if
+the cursor is at the end of a non-empty line.</li>
+<li><code>Alt</code>-<code>d</code>: Cut from under the cursor to the
+end of the current smallword.</li>
+<li><code>Ctrl</code>-<code>y</code>: Paste the most recently cut
+text.</li>
+<li><code>Alt</code>-<code>y</code>: Rotate between the most recently
+cut text. (Only works if the last action was either
+<code>Ctrl</code>-<code>y</code> or
+<code>Alt</code>-<code>y</code>.)</li>
+<li><code>Ctrl</code>-<code>u</code>: Cut from the left side of the
+cursor to the beginning of the line.</li>
+<li><code>Ctrl</code>-<code>k</code>: Cut from under the cursor to the
+end of the line.</li>
+<li><code>Ctrl</code>-<code>l</code>: Clear the screen leaving the
+current line untouched. Same as the command <code>clear</code>, as far
+as I can tell.</li>
+<li><code>Ctrl</code>-<code>w</code>: Cut one bigword to the left.</li>
+<li><code>Ctrl</code>-<code>t</code>: Swap the character under the
+cursor with the character to the left of the cursor. If this is used at
+the end of the line, swap the last two characters before the
+cursor.</li>
+<li><code>Alt</code>-<code>t</code>: Swap the current smallword with the
+previous smallword.</li>
+<li><code>Ctrl</code>-<code>v</code>: Literally insert the next typed
+character. For example,
+<code>Ctrl</code>-<code>v</code> <code>Tab</code> will insert a literal
+Tab character instead of completing the command.</li>
+<li><code>Ctrl</code>-<code>x</code> <code>Ctrl</code>-<code>e</code>:
+Open the default editor and execute the edited command. (This can be set
+with the <code>$EDITOR</code> variable, for example entering
+<code>EDITOR=vim</code> on a separate line will set the editor to
+Vim.)</li>
+<li><code>Alt</code>-<code>c</code>: Capitalise the character under the
+cursor and move to the end of the current smallword.</li>
+<li><code>Alt</code>-<code>u</code>: Make the current smallword
+uppercase. (From under the cursor to the end of the current
+sequence.)</li>
+<li><code>Alt</code>-<code>l</code>: Make the current smallword all
+lowercase (from under the cursor to the end of the sequence) and move
+the cursor to the end the sequence.</li>
+<li><code>Alt</code>-<code>.</code> or <code>Alt</code>-<code>_</code>:
+Paste the last argument of the previous command.</li>
+<li><code>Alt</code>-<code>Ctrl</code>-<code>y</code>: Paste the second
+bigword of the previous command.</li>
+<li><code>Alt</code>-<code>Ctrl</code>-<code>e</code>: Expand the
+current line. For example,
+<code>~</code> <code>Alt</code>-<code>Ctrl</code>-<code>e</code> will
+expand to <code>/home/$USER</code>.</li>
+</ul>
+<h2 id="processes">Processes</h2>
+<ul>
+<li><code>Ctrl</code>-<code>c</code>: Terminate the command.</li>
+<li><code>Ctrl</code>-<code>z</code>: Stop the current process. Typing
+<code>bg</code> will restart it in the background and <code>fg</code>
+will restore it to the foreground.</li>
+<li><code>Ctrl</code>-<code>s</code>: Freeze the terminal.</li>
+<li><code>Ctrl</code>-<code>q</code>: Restore a frozen terminal.</li>
+<li><code>Ctrl</code>-<code>m</code> or <code>Enter</code>: Enter the
+command.</li>
+<li><code>Ctrl</code>-<code>o</code>: Accept the current line, then
+fetch the exact same line and print it on the new line.</li>
+</ul>
+<h2 id="history">History</h2>
+<ul>
+<li><code>Ctrl</code>-<code>p</code> or <code>Up Arrow Key</code>: Show
+the previous command in the history.</li>
+<li><code>Ctrl</code>-<code>n</code> or <code>Down Arrow Key</code>:
+Show the next command in the history.</li>
+<li><code>Alt</code>-<code>&lt;</code>: Move to the first item in the
+history.</li>
+<li><code>Alt</code>-<code>&gt;</code>: Move to the last item in the
+history (the current command, not the last executed command).</li>
+<li><code>Ctrl</code>-<code>r</code>: Reverse-search the history
+incrementally. For example, pressing <code>Ctrl</code>-<code>r</code>,
+then typing ‘string’, then pressing <code>Ctrl</code>-<code>r</code>,
+<code>Ctrl</code>-<code>r</code>, …, will scroll through all commands in
+the history containing ‘string’. Press <code>Ctrl</code>-<code>g</code>
+to break out of the search.</li>
+<li><code>Alt</code>-<code>p</code>: Reverse search the history
+non-incrementally.</li>
+</ul>
+<p>The following commands are useful if you want to execute similar
+commands from your history. In retrospect, most of these were a terrible
+idea and you should just install fzf. I don’t even think they are useful
+in scripting.</p>
+<ul>
+<li><code>!!</code>: An alias for the previous command. (Useful for
+<code>sudo !!</code>, for example.)</li>
+<li><code>!string</code>: Execute the most recent command in the history
+beginning with ‘string’.</li>
+<li><code>!string:p</code>: Print the most recent command in the history
+beginning with ‘string’, so you see what <em>would</em> have been run if
+you typed <code>!string</code>.</li>
+<li><code>!n</code>: Execute the <em>n</em>th command in the history,
+where <em>n</em> is a positive integer. Type <code>history</code> to get
+a list.</li>
+<li><code>!$</code>: An alias for the last bigword of the previous
+command.</li>
+<li><code>!^</code>: An alias for the first bigword of the previous
+command.</li>
+<li><code>!*</code>: An alias for the previous command without the last
+bigword. (So if the previous command was <code>ls -A /home/$USER</code>,
+then <code>!*</code> would give just <code>ls -A</code>.)</li>
+<li><code>!n:p</code>: Print the <em>n</em>th command in the history.
+<code>!$:p</code>, <code>!^:p</code>, …, also work.</li>
+<li><code>^string1^string2</code>: In the previous command, replace the
+first occurrence of “string1” with “string2”, then execute.</li>
+</ul>
+<h2 id="completions">Completions</h2>
+<ul>
+<li><code>Ctrl</code>-<code>x</code> <code>~</code>: Print username
+completions.</li>
+<li><code>Alt</code>-<code>~</code>: Attempt username completion.</li>
+<li><code>Ctrl</code>-<code>x</code> <code>!</code>: Print command name
+completions.</li>
+<li><code>Alt</code>-<code>!</code>: Attempt command name
+completion.</li>
+<li><code>Ctrl</code>-<code>x</code> <code>/</code>: Print filename
+completions.</li>
+<li><code>Alt</code>-<code>/</code>: Attempt filename completion.</li>
+<li><code>Ctrl</code>-<code>x</code> <code>$</code>: Print shell
+variable completions.</li>
+<li><code>Alt</code>-<code>$</code>: Attempt shell variable
+completion.</li>
+<li><code>Ctrl</code>-<code>x</code> <code>@</code>: Show host name
+completions.</li>
+<li><code>Alt</code>-<code>@</code>: Attempt hostname completion.</li>
+<li><code>Alt</code>-<code>&amp;</code>: Perform tilde expansion.</li>
+<li><code>Alt</code>-<code>*</code>: Insert all possible
+completions.</li>
+<li><code>Alt</code>-<code>?</code>: Show the current completion
+list.</li>
+<li><code>Alt</code>-<code>{</code>: Insert all filename completions
+within braces.</li>
+</ul>
+<h2 id="scrolling">Scrolling</h2>
+<ul>
+<li><code>Shift</code>-<code>Page Up</code>: Scroll up one screen. (This
+may not work for some terminals. Use your mouse instead if you have
+one.)</li>
+<li><code>Shift</code>-<code>Page Down</code>: Scroll down one
+screen.</li>
+</ul>
+</main>
+
+<footer>
+<hr />
+<p>
+  <a rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">
+    <img src="./cc_public_domain.png" style="border-style: none;" alt="CC0" />
+  </a>
+  <br />
+  To the extent possible under law, Issa Rice has waived all copyright and
+  related or neighboring rights to the content on this page. This work is
+  published from: United States.
+  See the
+  <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0
+    1.0 Universal Public Domain Dedication</a>
+  for more information.
+</p>
+</footer>
+
+<script>
+  document.getElementById('changeThemeMenu').style.display='inline';
+  change_theme.set_theme_from_local_storage();
+  $(function(){
+    $("table").tablesorter();
+  });
+  anchors.add();
+</script>
+</body>
+</html>

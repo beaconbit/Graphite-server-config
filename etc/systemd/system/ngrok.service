@@ -1,0 +1,16 @@
+[Unit]
+Description=ngrok tunneling service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+ExecStart=/usr/local/bin/ngrok start --all --config /etc/ngrok/ngrok.yml
+Restart=always
+RestartSec=10
+Environment=NGROK_AUTHTOKEN=2xQtJTPuz9DLxAU4FMiqONV1Gnv_6Mch1jVqc6kfU75qAn3hN
+
+[Install]
+WantedBy=multi-user.target
+
